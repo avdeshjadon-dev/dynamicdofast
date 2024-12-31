@@ -1,0 +1,156 @@
+/* General Body Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #a3c2f2, #d4a0ff);
+  background-size: 200% 200%;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Heading Styling */
+.heading {
+  font-size: 2.5rem;
+  color: #6a5acd;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Form Container Styling */
+.form-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  animation: formAnimation 1.5s ease-out;
+}
+
+/* Label Styling */
+label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #6a5acd;
+  display: block;
+  font-weight: 600;
+}
+
+/* Input Styling */
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 2px solid #6a5acd;
+  border-radius: 15px;
+  font-size: 1rem;
+  background-color: #f2f7ff;
+  color: #6a5acd;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Input Focus Effect */
+input:focus {
+  border-color: #8a2be2;
+  outline: none;
+}
+
+/* Date Input Styling */
+input[type="date"] {
+  background-color: #f2f7ff;
+  border-radius: 15px;
+  padding-right: 40px;
+  color: #6a5acd;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+/* Date Input Focus Styling */
+input[type="date"]:focus {
+  border-color: #8a2be2;
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.7);
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(45deg, #6a5acd, #8a2be2);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #8a2be2;
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.7);
+}
+
+/* Footer Section Styling */
+footer {
+  position: absolute;
+  bottom: 10px; /* Adjust this as needed to avoid overlapping */
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #6a5acd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Text Styling */
+footer p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes formAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
