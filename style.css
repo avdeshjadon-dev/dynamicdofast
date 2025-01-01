@@ -6,7 +6,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure full screen coverage */
+  height: 100vh;
   text-align: center;
   overflow: hidden;
   background: linear-gradient(135deg, #a3c2f2, #d4a0ff);
@@ -29,7 +29,7 @@ body {
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  width: 90%; /* Adjust to fit smaller screens */
+  width: 100%;
   max-width: 450px;
   animation: formAnimation 1.5s ease-out;
 }
@@ -101,8 +101,8 @@ button:hover {
 
 /* Footer Section Styling */
 footer {
-  position: relative; /* Adjusted for responsiveness */
-  margin-top: 20px;
+  position: absolute;
+  bottom: 10px;
   width: 100%;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
@@ -118,6 +118,75 @@ footer {
 footer p {
   margin: 0;
   font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 2rem;
+  }
+
+  .form-container {
+    padding: 25px;
+    max-width: 400px;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .form-container {
+    padding: 20px;
+    max-width: 350px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  footer {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .form-container {
+    padding: 15px;
+    max-width: 300px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
 }
 
 /* Animations */
@@ -152,36 +221,5 @@ footer p {
   }
   100% {
     background-position: 0% 50%;
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .heading {
-    font-size: 2rem;
-  }
-  .form-container {
-    padding: 20px;
-  }
-  button {
-    font-size: 1rem;
-    padding: 10px;
-  }
-  footer {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .heading {
-    font-size: 1.8rem;
-  }
-  input {
-    font-size: 0.9rem;
-    padding: 10px 12px;
-  }
-  button {
-    font-size: 0.9rem;
   }
 }
